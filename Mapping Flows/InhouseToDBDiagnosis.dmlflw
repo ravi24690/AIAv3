@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <flow xmlns="http://www.axway.com/mappingServices/flow" id="b6434c16-8af9-4653-9df8-bef095767239">
-   <signature appVersion="3.1.2" lastUpdatedOn="24/09/2018 17:07:49 +0530"/>
+   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 15:45:49 +0530"/>
    <channelLinks>
       <channelLink name="Link1" hash="55df1cf9-a02b-468d-9140-338c40da2df4" virtual="true">
          <source ref="a31e27db-bf52-40d9-93b3-9640b7218906"/>
@@ -17,6 +17,7 @@
             <function>~/Extended Objects/SelectQuery.fct</function>
             <function>~/Extended Objects/SelectImageStatus.fct</function>
             <function>~/Extended Objects/SelectDetailsStatus.fct</function>
+            <function>~/Extended Objects/CheckDiagnosisCode.fct</function>
          </functions>
       </channelLink>
    </channelLinks>
@@ -137,6 +138,7 @@ if isNullOrAbsent (in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber ) then 	%str
          </intructions>
          <functionsWithChannels>
             <functionWithChannel>/AIA_V3/Extended Objects/SelectQuery.fct</functionWithChannel>
+            <functionWithChannel>/AIA_V3/Extended Objects/CheckDiagnosisCode.fct</functionWithChannel>
             <functionWithChannel>/AIA_V3/Extended Objects/SelectImageStatus.fct</functionWithChannel>
             <functionWithChannel>/AIA_V3/Extended Objects/SelectDetailsStatus.fct</functionWithChannel>
          </functionsWithChannels>

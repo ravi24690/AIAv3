@@ -5,7 +5,7 @@ Visit Type: OP
 
 Invoice Number|Invoice Date|Diagnosis Code|Diagnosis Description|Specialist Name 1|Specialist Name 2
 OPC-101872|29/01/2018|A021|Certain infectious and parasitic diseases|Dr ABC|Dr DEF
-OPC-101873|30/01/2018|M5116|Intervertebral disc disorders w radiculopathy, lumbar region|Dr ABC|
+OPC-101873|30/01/2018|M5116324|Intervertebral disc disorders w radiculopathy, lumbar region|Dr ABC|
 OPC-101874|29/01/2018|M436|Diseases of the musculoskeletal system and connective tissue||
 OPC-101875|43102||Tinea cruris|Dr ABC|
 OPC-101876|30/01/2018|K830|Cholangitis|Dr ABC|
