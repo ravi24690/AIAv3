@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseMap xmlns="http://www.axway.com/mappingServices/databaseMap" databaseHost="10.151.14.55" type="INSERT" databasePort="1521" databaseName="10.151.14.55:1521:orcl" databaseType="Oracle" id="2d0e0936-f140-431a-b41c-7bd292709ceb">
+   <signature appVersion="3.1.2" lastUpdatedOn="20/09/2018 15:53:36 +0530"/>
+   <outputBusinessDocument/>
+   <expression><![CDATA[insert into "RECONCILIATION_REPORT" values (
+#PROVIDER_CODE#, 
+#PROVIDER_NAME#, 
+#INVOICE_NUMBER#, 
+#INVOICE_DATE#, 
+#LOG_NUMBER#, 
+#AIA_DIAGNOSIS_CODE#, 
+#BILLING_ITEM_GROUPING_CODE#, 
+#PAYABLE_AMOUNT#, 
+#DATE_TIME_PROCESSED#, 
+#CLAIM_FILENAME#, 
+#GL_NO#, 
+#CLAIM_STATUS#, 
+#DIAGNOSIS_STATUS#, 
+#DETAILS_STATUS#, 
+#IMAGE_STATUS#, 
+#OVERALL_STATUS#)
+]]></expression>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Details_Insert_DB_INSERT.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mappings>
+      <mapping endPosition="350">
+         <inputMapElements>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="PROVIDER_CODE" elementPath="/root/PROVIDER_CODE/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="PROVIDER_NAME" elementPath="/root/PROVIDER_NAME/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="INVOICE_NUMBER" elementPath="/root/INVOICE_NUMBER/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="INVOICE_DATE" elementPath="/root/INVOICE_DATE/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="LOG_NUMBER" elementPath="/root/LOG_NUMBER/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="AIA_DIAGNOSIS_CODE" elementPath="/root/AIA_DIAGNOSIS_CODE/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="BILLING_ITEM_GROUPING_CODE" elementPath="/root/BILLING_ITEM_GROUPING_CODE/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="PAYABLE_AMOUNT" elementPath="/root/PAYABLE_AMOUNT/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="DATE_TIME_PROCESSED" elementPath="/root/DATE_TIME_PROCESSED/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="CLAIM_FILENAME" elementPath="/root/CLAIM_FILENAME/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="GL_NO" elementPath="/root/GL_NO/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="CLAIM_STATUS" elementPath="/root/CLAIM_STATUS/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="DIAGNOSIS_STATUS" elementPath="/root/DIAGNOSIS_STATUS/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="DETAILS_STATUS" elementPath="/root/DETAILS_STATUS/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="IMAGE_STATUS" elementPath="/root/IMAGE_STATUS/"/>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="OVERALL_STATUS" elementPath="/root/OVERALL_STATUS/"/>
+         </inputMapElements>
+      </mapping>
+   </mappings>
+</databaseMap>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="I" id="a5b1cfb4-8ad4-4f73-baa2-c46d6effd391">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select count( * ) from reconciliation_report]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="24/09/2018 20:21:26 +0530"/>
+</customFunction>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="I" id="59fb2c82-6fd1-4343-aff2-8e1551fa5674">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select count( * ) from reconciliation_report where INVOICE_NUMBER = #param0# and ( diagnosis_status = #param1# or DIAGNOSIS_STATUS is null )]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 14:19:50 +0530"/>
+   <parameters>
+      <parameter dmlClass="S" name="param0" description="invoice_number"/>
+      <parameter dmlClass="S" name="param1" description="label param1"/>
+   </parameters>
+</customFunction>

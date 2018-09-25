@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="d30e3a2a-b490-48e9-b67d-dbb46fb9e81e">
+   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 14:39:54 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Claim_Insert_DB_INSERT.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Claim.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="406625609" elementPath="/root/">
+         <dmlExpression><![CDATA[1 times]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2051712173" elementPath="/root/PAYABLE_AMOUNT/">
+         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\TotalPayableAmount]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1606940213" elementPath="/root/PROVIDER_NAME/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderName\Name, "Provider Name: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1030478687" elementPath="/root/INVOICE_NUMBER/">
+         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter]\InvoiceNumber]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1240373967" elementPath="/root/OVERALL_STATUS/">
+         <dmlExpression><![CDATA["Failed"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1361717521" elementPath="/root/CLAIM_STATUS/">
+         <dmlExpression><![CDATA[if %flag = 0
+then
+"Failed: Mandatory field missing"
+else
+"Passed"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="548925569" elementPath="/root/INVOICE_DATE/">
+         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\InvoiceDate]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-513093234" elementPath="/root/DATE_TIME_PROCESSED/">
+         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) ,"MM/DD/YYYY" ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1766982281" elementPath="/root/PROVIDER_CODE/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderCode\Code, "Provider Code: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-581455599" elementPath="/root/CLAIM_FILENAME/">
+         <dmlExpression><![CDATA[%s_FileName:=getAttribute ( "B2BXGIReceiveInfo" );
+%start_pos:=index ( %s_FileName, "ConsumptionFileName" ) ;
+%end_pos:=index ( %s_FileName, "ConsumptionFileNameExtension" ) ;
+getSubString ( %s_FileName, %start_pos+22,%end_pos-5-%start_pos-29)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1823136426" elementPath="/root/LOG_NUMBER/">
+         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\LOGNumber]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

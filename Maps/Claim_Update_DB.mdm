@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseMap xmlns="http://www.axway.com/mappingServices/databaseMap" databaseHost="10.151.14.55" type="UPDATE" databasePort="1521" databaseName="10.151.14.55:1521:orcl" databaseType="Oracle" id="84ed0f56-25e7-410c-a5f7-ce3c4cd0f61e">
+   <signature appVersion="3.1.2" lastUpdatedOn="24/09/2018 21:21:58 +0530"/>
+   <outputBusinessDocument/>
+   <expression><![CDATA[update "RECONCILIATION_REPORT" set "PROVIDER_CODE" = #PROVIDER_CODE#, "PROVIDER_NAME" = #PROVIDER_NAME#, "INVOICE_NUMBER" = #INVOICE_NUMBER#, "INVOICE_DATE" = #INVOICE_DATE#, "LOG_NUMBER" = #LOG_NUMBER#, "PAYABLE_AMOUNT" = #PAYABLE_AMOUNT#, "DATE_TIME_PROCESSED" = #DATE_TIME_PROCESSED#, "CLAIM_FILENAME" = #CLAIM_FILENAME#, "CLAIM_STATUS" = #CLAIM_STATUS# , "OVERALL_STATUS" = #OVERALL_STATUS# 
+where ("RECONCILIATION_REPORT"."INVOICE_NUMBER" = #INVOICE_NUMBER#)]]></expression>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Claim_Update_DB_UPDATE.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mappings>
+      <mapping endPosition="463">
+         <inputMapElements>
+            <inputMapElement tableName="RECONCILIATION_REPORT" columnName="INVOICE_NUMBER" elementPath="/root/INVOICE_NUMBER/"/>
+         </inputMapElements>
+      </mapping>
+   </mappings>
+</databaseMap>

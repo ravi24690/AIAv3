@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="I" id="4ff2ebdd-e8e7-4eb2-ba90-b1158494b13c">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select count( * ) from reconciliation_report where INVOICE_NUMBER = #param0# and image_status is null]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="24/09/2018 19:40:15 +0530"/>
+   <parameters>
+      <parameter dmlClass="S" name="param0" description="invoice_number"/>
+   </parameters>
+</customFunction>

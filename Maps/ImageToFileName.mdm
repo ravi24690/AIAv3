@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="4d1954b5-a1e7-4da8-9e22-76568f9052e8">
+   <signature appVersion="3.1.2" lastUpdatedOn="20/09/2018 19:00:06 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/ReadImage.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Image.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="496466953" elementPath="/Root/FileName/">
+         <dmlExpression><![CDATA[{#%s_FileName:="CAHPUC_OPC-101872_CL25.pdf";
+getSubString ( %s_FileName, 8, 10 ) #}
+%s_FileName:=getAttribute ( "B2BXGIReceiveInfo" );
+%start_pos:=index ( %s_FileName, "ConsumptionFileName" ) ;
+%end_pos:=index ( %s_FileName, "ConsumptionFileNameExtension" ) ;
+%s_FileName:=getSubString ( %s_FileName, %start_pos+22,%end_pos-5-%start_pos-29);
+getSubString ( %s_FileName, 8, 10 ) ]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

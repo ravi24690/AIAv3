@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flow xmlns="http://www.axway.com/mappingServices/flow" id="b6434c16-8af9-4653-9df8-bef095767239">
+   <signature appVersion="3.1.2" lastUpdatedOn="24/09/2018 17:07:49 +0530"/>
+   <channelLinks>
+      <channelLink name="Link1" hash="55df1cf9-a02b-468d-9140-338c40da2df4" virtual="true">
+         <source ref="a31e27db-bf52-40d9-93b3-9640b7218906"/>
+         <target ref="09402e6c-07db-4c81-9bab-8e8539b21671"/>
+      </channelLink>
+      <channelLink name="Link1" hash="3b58ce59-49f8-40b1-83c8-aa05ff97f179" virtual="true">
+         <source ref="7495c1c5-1f9f-412b-a70a-a5032cc206f6"/>
+         <target ref="09402e6c-07db-4c81-9bab-8e8539b21671"/>
+      </channelLink>
+      <channelLink name="Link1" hash="824e7d04-4c79-4f56-87b6-ca426955a271" virtual="true">
+         <source ref="787b0275-f85c-4283-9883-37620cb6344f"/>
+         <target ref="09402e6c-07db-4c81-9bab-8e8539b21671"/>
+         <functions>
+            <function>~/Extended Objects/SelectQuery.fct</function>
+            <function>~/Extended Objects/SelectImageStatus.fct</function>
+            <function>~/Extended Objects/SelectDetailsStatus.fct</function>
+         </functions>
+      </channelLink>
+   </channelLinks>
+   <channels>
+      <channel name="Channel" hash="09402e6c-07db-4c81-9bab-8e8539b21671">
+         <ChannelType>
+            <![CDATA[DATABASE]]>
+         </ChannelType>
+      </channel>
+   </channels>
+   <configurationParameters>
+      <configurationParameter name="checkInputFacet" value="true"/>
+      <configurationParameter name="stopOnFirstInputFacetCheckError" value="true"/>
+      <configurationParameter name="checkInputCheckConstraints" value="false"/>
+      <configurationParameter name="stopOnFirstInputCheckConstraintsError" value="true"/>
+      <configurationParameter name="checkOutputFacet" value="false"/>
+      <configurationParameter name="stopOnFirstOutputFacetCheckError" value="true"/>
+      <configurationParameter name="checkOutputCheckConstraints" value="false"/>
+      <configurationParameter name="stopOnFirstOutputCheckConstraintsError" value="true"/>
+      <configurationParameter name="continueMessageProcessingOnError" value="false"/>
+      <configurationParameter name="groupAllResultingInstances" value="false"/>
+      <configurationParameter name="keepExactValue" value="false"/>
+      <configurationParameter name="copyAllAttributes" value="true"/>
+   </configurationParameters>
+   <graphLinks>
+      <graphLink name="Link1" hash="8cf6bad0-58fd-4cdf-9160-30874d2e92e8">
+         <source ref="3579f6dc-6e74-4359-b528-c64ec59da834"/>
+         <target ref="ff32f80a-e4b2-44d0-ba20-93ec0b2fab7c"/>
+      </graphLink>
+      <graphLink name="Link2" hash="2d4b0c59-6b4b-4bac-a996-731ff057ebb7">
+         <source ref="79a41e70-c233-4231-ba27-3c579dcbf3c8"/>
+         <target ref="6ff02284-405b-4a9e-8ed3-cb3aebf31e0c"/>
+      </graphLink>
+      <graphLink name="Link4" hash="e743c9d4-e316-41ec-af83-d1cabffd3884" virtual="true">
+         <source ref="10e78063-42ea-46e0-9060-1f6f7635bc74"/>
+         <target ref="c098cc51-096d-455b-94d3-4a0d3934a224"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink1" type="TYPE_OUTPUT" connectedObjectAlias="out" hash="52981eeb-6342-41a7-95ec-f9767f2a0027">
+         <source ref="61ec454a-1d22-43b3-ab2b-2d9b4dd00547"/>
+         <target ref="29121ec2-e168-4918-a9d8-d126e7adb94f"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink3" type="TYPE_OUTPUT" connectedObjectAlias="out1" hash="0d93f9b0-5ad1-406b-b42e-42fcf25d917d">
+         <source ref="480a4902-61bd-465f-89e7-4a6c4b42052e"/>
+         <target ref="85e29c28-cc2d-4ede-bf47-34ca8e2f4096"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink4" type="TYPE_INPUT" connectedObjectAlias="in" hash="673382c3-ad91-4c55-ad99-4eee6ab1b22e">
+         <source ref="85e29c28-cc2d-4ede-bf47-34ca8e2f4096"/>
+         <target ref="a31e27db-bf52-40d9-93b3-9640b7218906"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink5" type="TYPE_INPUT" connectedObjectAlias="in" hash="8bc223fd-2d7d-48db-adb6-60bac398f364">
+         <source ref="29121ec2-e168-4918-a9d8-d126e7adb94f"/>
+         <target ref="7495c1c5-1f9f-412b-a70a-a5032cc206f6"/>
+      </graphLink>
+      <graphLink name="Link3" hash="4506b66e-1e59-4d31-809a-a95d79a036f1">
+         <source ref="80ffcf3b-f386-493e-a889-5c381b019907"/>
+         <target ref="5eb8abf2-2aa2-47af-b6ce-adb30b4f2719"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink2" type="TYPE_INPUT" connectedObjectAlias="in" hash="c7659e96-aa46-4423-8200-fd45c494eb6b">
+         <source ref="5eb8abf2-2aa2-47af-b6ce-adb30b4f2719"/>
+         <target ref="787b0275-f85c-4283-9883-37620cb6344f"/>
+      </graphLink>
+   </graphLinks>
+   <graphNodes>
+      <graphNode factoryType="InputEntity" name="Input" hash="80ffcf3b-f386-493e-a889-5c381b019907">
+         <bounds height="40" width="90" y="240"/>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlock" name="Main_Block_InhouseToDBDiagnosis1" nameDisplayed="true" hash="787b0275-f85c-4283-9883-37620cb6344f">
+         <bounds x="210" height="580" width="245" y="3"/>
+         <channelLinks>
+            <channelLink ref="824e7d04-4c79-4f56-87b6-ca426955a271"/>
+         </channelLinks>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionLoop" name="Loop1" nameDisplayed="true" hash="ff32f80a-e4b2-44d0-ba20-93ec0b2fab7c">
+               <dmlExpression><![CDATA[count ( in:\Diagnosis )]]></dmlExpression>
+               <bounds x="3" height="460" width="214" y="80"/>
+               <intructions>
+                  <instruction factoryType="GraphicalInstructionIf" name="If1" nameDisplayed="true" hash="6ff02284-405b-4a9e-8ed3-cb3aebf31e0c">
+                     <dmlExpression><![CDATA[SelectQuery ( in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber ) = 0]]></dmlExpression>
+                     <bounds x="3" height="280" width="183" y="80"/>
+                     <intructions>
+                        <instruction factoryType="GraphicalInstructionBlockTrue" name="Then" nameDisplayed="true" hash="10e78063-42ea-46e0-9060-1f6f7635bc74">
+                           <bounds x="3" height="100" width="118" y="20"/>
+                           <intructions>
+                              <instruction factoryType="GraphicalInstructionMap" name="Diagnosis_Insert_InhouseToDB" nameDisplayed="true" mapName="~/Maps/Diagnosis_Insert_InhouseToDB.mdm" hash="480a4902-61bd-465f-89e7-4a6c4b42052e">
+                                 <bounds height="40" width="90" y="20"/>
+                              </instruction>
+                           </intructions>
+                        </instruction>
+                        <instruction factoryType="GraphicalInstructionBlockFalse" name="Else" nameDisplayed="true" hash="c098cc51-096d-455b-94d3-4a0d3934a224">
+                           <bounds x="3" height="100" width="118" y="140"/>
+                           <intructions>
+                              <instruction factoryType="GraphicalInstructionMap" name="Diagnosis_Update_InhouseToDB" nameDisplayed="true" mapName="~/Maps/Diagnosis_Update_InhouseToDB.mdm" hash="61ec454a-1d22-43b3-ab2b-2d9b4dd00547">
+                                 <bounds height="40" width="90" y="20"/>
+                              </instruction>
+                           </intructions>
+                        </instruction>
+                     </intructions>
+                  </instruction>
+                  <instruction factoryType="GraphicalInstructionSet" name="Set1" hash="79a41e70-c233-4231-ba27-3c579dcbf3c8">
+                     <dmlExpression><![CDATA[%i_InvoiceCounter :=  %i_InvoiceCounter +1;
+%flag:=1;
+
+if ( isNullOrAbsent (in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber ) or isNullOrAbsent (in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceDate) or isNullOrAbsent (in:\Diagnosis[ %i_InvoiceCounter ]\DiagnosisCode) or isNullOrAbsent (in:\Diagnosis[ %i_InvoiceCounter ]\DiagnosisDescription)
+	or isNullOrAbsent (in:\Diagnosis[ %i_InvoiceCounter ]\SpecialistName1) )
+then 
+{
+	%flag := 0
+};
+if isNullOrAbsent (in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber ) then 	%str_InvoiceNumberPresent := "NO"]]></dmlExpression>
+                     <bounds x="51" height="40" width="80" y="20"/>
+                  </instruction>
+               </intructions>
+            </instruction>
+            <instruction factoryType="GraphicalInstructionSet" name="Set1" hash="3579f6dc-6e74-4359-b528-c64ec59da834">
+               <dmlExpression><![CDATA[%i_InvoiceCounter := 0]]></dmlExpression>
+               <bounds x="67" height="40" width="80" y="20"/>
+            </instruction>
+         </intructions>
+         <functionsWithChannels>
+            <functionWithChannel>/AIA_V3/Extended Objects/SelectQuery.fct</functionWithChannel>
+            <functionWithChannel>/AIA_V3/Extended Objects/SelectImageStatus.fct</functionWithChannel>
+            <functionWithChannel>/AIA_V3/Extended Objects/SelectDetailsStatus.fct</functionWithChannel>
+         </functionsWithChannels>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="Diagnosis_Update_DB_UPDATE" hash="29121ec2-e168-4918-a9d8-d126e7adb94f">
+         <bounds x="470" height="40" width="90" y="333"/>
+         <documentName>~/Business Documents/Diagnosis_Update_DB_UPDATE.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlockDatabase" name="Diagnosis_Update_DB" nameDisplayed="true" hash="7495c1c5-1f9f-412b-a70a-a5032cc206f6">
+         <bounds x="633" height="100" width="139" y="287"/>
+         <channelLinks>
+            <channelLink ref="3b58ce59-49f8-40b1-83c8-aa05ff97f179"/>
+         </channelLinks>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionDatabaseMap" name="Diagnosis_Update_DB" nameDisplayed="true" mapName="~/Maps/Diagnosis_Update_DB.mdm" hash="6cfb37af-6178-4f13-9654-2aec61eb5574">
+               <bounds height="40" width="90" y="20"/>
+            </instruction>
+         </intructions>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="Diagnosis_Insert_DB_INSERT" hash="85e29c28-cc2d-4ede-bf47-34ca8e2f4096">
+         <bounds x="470" height="40" width="90" y="213"/>
+         <documentName>~/Business Documents/Diagnosis_Insert_DB_INSERT.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlockDatabase" name="Diagnosis_Insert_DB" nameDisplayed="true" hash="a31e27db-bf52-40d9-93b3-9640b7218906">
+         <bounds x="631" height="100" width="139" y="106"/>
+         <channelLinks>
+            <channelLink ref="55df1cf9-a02b-468d-9140-338c40da2df4"/>
+         </channelLinks>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionDatabaseMap" name="Diagnosis_Insert_DB" nameDisplayed="true" mapName="~/Maps/Diagnosis_Insert_DB.mdm" hash="f0a611d2-e390-4801-89ff-adf9fc88e053">
+               <bounds height="40" width="90" y="20"/>
+            </instruction>
+         </intructions>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="Diagnosis" hash="5eb8abf2-2aa2-47af-b6ce-adb30b4f2719">
+         <bounds x="101" height="40" width="90" y="224"/>
+         <documentName>~/Business Documents/Diagnosis.bdoc</documentName>
+      </graphNode>
+   </graphNodes>
+</flow>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="c2f8025c-bef9-4f06-ad37-2a916f6d0067">
+   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 14:49:50 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Details_Insert_DB_INSERT.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/DetailsMerge.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="815535308" elementPath="/root/INVOICE_NUMBER/">
+         <dmlExpression><![CDATA[in:\Root[ %i_InvoiceCounter ]\InvoiceNumber]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-536862484" elementPath="/root/DETAILS_STATUS/">
+         <dmlExpression><![CDATA[if %flag = 0
+then
+"Failed: Mandatory field missing"
+else
+"Passed"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1266444095" elementPath="/root/">
+         <dmlExpression><![CDATA[1 times]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1994549872" elementPath="/root/BILLING_ITEM_GROUPING_CODE/">
+         <dmlExpression><![CDATA[in:\Root[ %i_InvoiceCounter ]\BillingItemGroupingID]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="894663076" elementPath="/root/OVERALL_STATUS/">
+         <dmlExpression><![CDATA["Failed"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-956575964" elementPath="/root/PROVIDER_CODE/">
+         <dmlExpression><![CDATA[trimString ( in:\Root[ %i_InvoiceCounter ]\ProviderCode,  "Provider Code: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1072905840" elementPath="/root/INVOICE_DATE/">
+         <dmlExpression><![CDATA[in:\Root[ %i_InvoiceCounter ]\InvoiceDate]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1415377633" elementPath="/root/DATE_TIME_PROCESSED/">
+         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) , "MM/DD/YYYY" ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-932872163" elementPath="/root/PROVIDER_NAME/">
+         <dmlExpression><![CDATA[trimString ( in:\Root[ %i_InvoiceCounter ]\ProviderName,  "Provider Name: " ) ]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

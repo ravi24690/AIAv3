@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flow xmlns="http://www.axway.com/mappingServices/flow" id="94aeb26c-8349-428f-bff8-e82debf584c8">
+   <signature appVersion="3.1.2" lastUpdatedOn="20/09/2018 17:06:32 +0530"/>
+   <channelLinks>
+      <channelLink name="Link1" hash="8b391f2c-f861-4daa-8cc3-568909cd4b2f" virtual="true">
+         <source ref="b33cf5ea-bc11-4b8d-bd6f-e02f5410f7e8"/>
+         <target ref="ab305944-14fb-429f-b9eb-6c548bfd7b52"/>
+         <functions>
+            <function>~/Extended Objects/SelectQuery.fct</function>
+         </functions>
+      </channelLink>
+      <channelLink name="Link1" hash="45b31e0d-a616-4a05-b16e-04d33b3a411c" virtual="true">
+         <source ref="13c1b70f-86ec-4906-8f16-03c216023022"/>
+         <target ref="ab305944-14fb-429f-b9eb-6c548bfd7b52"/>
+      </channelLink>
+      <channelLink name="Link1" hash="3a2c54cf-ca3a-4d34-a319-7560cecaf3e2" virtual="true">
+         <source ref="2ebd7785-6903-49c4-9230-b25f7fb78ad4"/>
+         <target ref="ab305944-14fb-429f-b9eb-6c548bfd7b52"/>
+      </channelLink>
+   </channelLinks>
+   <channels>
+      <channel name="Channel" hash="ab305944-14fb-429f-b9eb-6c548bfd7b52">
+         <ChannelType>
+            <![CDATA[DATABASE]]>
+         </ChannelType>
+      </channel>
+   </channels>
+   <configurationParameters>
+      <configurationParameter name="checkInputFacet" value="true"/>
+      <configurationParameter name="stopOnFirstInputFacetCheckError" value="true"/>
+      <configurationParameter name="checkInputCheckConstraints" value="false"/>
+      <configurationParameter name="stopOnFirstInputCheckConstraintsError" value="true"/>
+      <configurationParameter name="checkOutputFacet" value="false"/>
+      <configurationParameter name="stopOnFirstOutputFacetCheckError" value="true"/>
+      <configurationParameter name="checkOutputCheckConstraints" value="false"/>
+      <configurationParameter name="stopOnFirstOutputCheckConstraintsError" value="true"/>
+      <configurationParameter name="continueMessageProcessingOnError" value="false"/>
+      <configurationParameter name="groupAllResultingInstances" value="false"/>
+      <configurationParameter name="keepExactValue" value="false"/>
+      <configurationParameter name="copyAllAttributes" value="true"/>
+   </configurationParameters>
+   <graphLinks>
+      <graphLink factoryType="FlowMainLink" name="FlowLink1" type="TYPE_INPUT" connectedObjectAlias="in" hash="12e480a7-aa82-40ae-a350-35b662159ddf">
+         <source ref="037f62a9-79eb-4c87-bb7f-59f9e0c68e98"/>
+         <target ref="1a8b9f13-d253-4b3c-8cb9-cb82b6ae756c"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink2" type="TYPE_OUTPUT" connectedObjectAlias="out" hash="9db27683-dbba-4d7d-be44-a7694df71bf4">
+         <source ref="6c5cf9a8-99eb-4fda-9b43-8a7e69081e10"/>
+         <target ref="2117e7ba-478d-43ec-8fdb-dc3721c4623f"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink3" type="TYPE_INPUT" connectedObjectAlias="in" hash="b68448a5-bacf-413e-b0d5-64d38860a6fb">
+         <source ref="2117e7ba-478d-43ec-8fdb-dc3721c4623f"/>
+         <target ref="b33cf5ea-bc11-4b8d-bd6f-e02f5410f7e8"/>
+      </graphLink>
+      <graphLink name="Link3" hash="95520041-8990-493e-a2a1-ccf41e6cb30e">
+         <source ref="1f6d91cb-695b-4be6-b35b-dbdab705587e"/>
+         <target ref="037f62a9-79eb-4c87-bb7f-59f9e0c68e98"/>
+      </graphLink>
+      <graphLink name="Link4" hash="f3cfd487-0129-4be8-a5b0-37fd4c8ecc0c" virtual="true">
+         <source ref="321d3290-1ef7-4444-9072-fb5f6c820f2e"/>
+         <target ref="167827fb-8472-4482-8d31-6a523ef0ea15"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink4" type="TYPE_INPUT" connectedObjectAlias="in" hash="04686c69-bba2-4ef2-8fa1-4d6dcca84735">
+         <source ref="1436cd3b-fb04-4b5b-9946-6feb3366106a"/>
+         <target ref="13c1b70f-86ec-4906-8f16-03c216023022"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink7" type="TYPE_OUTPUT" connectedObjectAlias="out1" hash="0871c827-1e74-4767-831d-882ca1c2765d">
+         <source ref="8e34fedf-23ab-4a1d-85f8-276907a8b79d"/>
+         <target ref="276b6f8c-1965-4819-8bd4-d7ba1fcfbeb5"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink5" type="TYPE_OUTPUT" connectedObjectAlias="out" hash="d3902df5-e846-40d2-876c-cd8cdb9ccccd">
+         <source ref="0e94fcf1-3798-4f0c-af71-2dd4ea02075f"/>
+         <target ref="1436cd3b-fb04-4b5b-9946-6feb3366106a"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink6" type="TYPE_INPUT" connectedObjectAlias="in" hash="5b1107ed-7a56-48d5-bcfa-201f11f1f165">
+         <source ref="276b6f8c-1965-4819-8bd4-d7ba1fcfbeb5"/>
+         <target ref="2ebd7785-6903-49c4-9230-b25f7fb78ad4"/>
+      </graphLink>
+   </graphLinks>
+   <graphNodes>
+      <graphNode factoryType="InputEntity" name="Input" hash="1f6d91cb-695b-4be6-b35b-dbdab705587e">
+         <bounds height="40" width="90" y="150"/>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlock" name="Main_Block_ImageToDBImage1" nameDisplayed="true" hash="1a8b9f13-d253-4b3c-8cb9-cb82b6ae756c">
+         <bounds x="210" height="100" width="139" y="120"/>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionMap" name="ImageToFileName" nameDisplayed="true" mapName="~/Maps/ImageToFileName.mdm" hash="6c5cf9a8-99eb-4fda-9b43-8a7e69081e10">
+               <bounds height="40" width="90" y="20"/>
+            </instruction>
+         </intructions>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="Image" hash="037f62a9-79eb-4c87-bb7f-59f9e0c68e98">
+         <bounds x="105" height="40" width="90" y="150"/>
+         <documentName>~/Business Documents/Image.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="ReadImage" hash="2117e7ba-478d-43ec-8fdb-dc3721c4623f">
+         <bounds x="364" height="40" width="90" y="142"/>
+         <documentName>~/Business Documents/ReadImage.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlock" name="Main_Block_ImageToDBImage2" nameDisplayed="true" hash="b33cf5ea-bc11-4b8d-bd6f-e02f5410f7e8">
+         <bounds x="469" height="340" width="214" y="3"/>
+         <channelLinks>
+            <channelLink ref="8b391f2c-f861-4daa-8cc3-568909cd4b2f"/>
+         </channelLinks>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionIf" name="If1" nameDisplayed="true" hash="bf26bce0-3748-45f7-ae02-8849e223dec0">
+               <dmlExpression><![CDATA[SelectQuery ( in:\Root\FileName )  = 0]]></dmlExpression>
+               <bounds x="3" height="280" width="183" y="20"/>
+               <intructions>
+                  <instruction factoryType="GraphicalInstructionBlockTrue" name="Then" nameDisplayed="true" hash="321d3290-1ef7-4444-9072-fb5f6c820f2e">
+                     <bounds x="3" height="100" width="118" y="20"/>
+                     <intructions>
+                        <instruction factoryType="GraphicalInstructionMap" name="Image_Insert_InhouseToDB" nameDisplayed="true" mapName="~/Maps/Image_Insert_InhouseToDB.mdm" hash="0e94fcf1-3798-4f0c-af71-2dd4ea02075f">
+                           <bounds height="40" width="90" y="20"/>
+                        </instruction>
+                     </intructions>
+                  </instruction>
+                  <instruction factoryType="GraphicalInstructionBlockFalse" name="Else" nameDisplayed="true" hash="167827fb-8472-4482-8d31-6a523ef0ea15">
+                     <bounds x="3" height="100" width="118" y="140"/>
+                     <intructions>
+                        <instruction factoryType="GraphicalInstructionMap" name="Image_Update_InhouseToDB" nameDisplayed="true" mapName="~/Maps/Image_Update_InhouseToDB.mdm" hash="8e34fedf-23ab-4a1d-85f8-276907a8b79d">
+                           <bounds height="40" width="90" y="20"/>
+                        </instruction>
+                     </intructions>
+                  </instruction>
+               </intructions>
+            </instruction>
+         </intructions>
+         <functionsWithChannels>
+            <functionWithChannel>/AIA_V3/Extended Objects/SelectQuery.fct</functionWithChannel>
+         </functionsWithChannels>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlockDatabase" name="Image_Insert_DB" nameDisplayed="true" hash="13c1b70f-86ec-4906-8f16-03c216023022">
+         <bounds x="826" height="100" width="139" y="28"/>
+         <channelLinks>
+            <channelLink ref="45b31e0d-a616-4a05-b16e-04d33b3a411c"/>
+         </channelLinks>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionDatabaseMap" name="Image_Insert_DB" nameDisplayed="true" mapName="~/Maps/Image_Insert_DB.mdm" hash="e3e5b985-7e13-41f3-bfea-a9bfe7186277">
+               <bounds height="40" width="90" y="20"/>
+            </instruction>
+         </intructions>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="Image_Insert_DB_INSERT" hash="1436cd3b-fb04-4b5b-9946-6feb3366106a">
+         <bounds x="698" height="40" width="90" y="71"/>
+         <documentName>~/Business Documents/Image_Insert_DB_INSERT.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlockDatabase" name="Image_Update_DB" nameDisplayed="true" hash="2ebd7785-6903-49c4-9230-b25f7fb78ad4">
+         <bounds x="844" height="100" width="139" y="189"/>
+         <channelLinks>
+            <channelLink ref="3a2c54cf-ca3a-4d34-a319-7560cecaf3e2"/>
+         </channelLinks>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionDatabaseMap" name="Image_Update_DB" nameDisplayed="true" mapName="~/Maps/Image_Update_DB.mdm" hash="8c1f4437-b62d-44af-a4ec-69752663ce89">
+               <bounds height="40" width="90" y="20"/>
+            </instruction>
+         </intructions>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="Image_Update_DB_UPDATE" hash="276b6f8c-1965-4819-8bd4-d7ba1fcfbeb5">
+         <bounds x="698" height="40" width="90" y="191"/>
+         <documentName>~/Business Documents/Image_Update_DB_UPDATE.bdoc</documentName>
+      </graphNode>
+   </graphNodes>
+</flow>

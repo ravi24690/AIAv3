@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseMap xmlns="http://www.axway.com/mappingServices/databaseMap" databaseHost="10.151.14.55" type="UPDATE" databasePort="1521" databaseName="10.151.14.55:1521:orcl" databaseType="Oracle" id="d66b7080-7096-48d0-9906-b995d48a655a">
+   <signature appVersion="3.1.2" lastUpdatedOn="24/09/2018 22:24:17 +0530"/>
+   <outputBusinessDocument/>
+   <expression><![CDATA[update "RECONCILIATION_REPORT" set "PROVIDER_NAME" = #PROVIDER_NAME#, "DATE_TIME_PROCESSED" = #DATE_TIME_PROCESSED#, "OVERALL_STATUS" = #OVERALL_STATUS#
+where ("RECONCILIATION_REPORT"."PROVIDER_CODE" IS NULL )]]></expression>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Claim_UpdateProvider_DB_UPDATE.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mappings>
+      <mapping endPosition="209"/>
+   </mappings>
+</databaseMap>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="c5e8c5fa-e212-40a1-8ece-e2b0f4efa6c3">
+   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 14:27:54 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/DetailsMerge.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Details.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1565762950" elementPath="/Root/BillingItemGroupingID/">
+         <dmlExpression><![CDATA[ %i_Count := 0;
+ %str_BillingItem := "";
+%Str_InvoiceNumber := this\InvoiceNumber;
+loop on in:\Details[ where item\InvoiceNumber =  %Str_InvoiceNumber ]
+{
+	%i_Count := %i_Count +1;
+	%str_BillingItem :=  this\BillingItemGroupingID + "|" + %str_BillingItem
+
+};
+%str_BillingItem]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1316451069" elementPath="/Root/UnitPrice/">
+         <dmlExpression><![CDATA[this\UnitPrice]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-239290369" elementPath="/Root/ProviderCode/">
+         <dmlExpression><![CDATA[in:\ProviderCode\Code]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1885406767" elementPath="/Root/ProviderName/">
+         <dmlExpression><![CDATA[in:\ProviderName\Name]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1811595125" elementPath="/Root/InvoiceNumber/">
+         <dmlExpression><![CDATA[%s_InvoiceData := %s_InvoiceData + this\InvoiceNumber;
+this\InvoiceNumber]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1859419738" elementPath="/Root/BillingItemDescription/">
+         <dmlExpression><![CDATA[this\BillingItemDescription]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-450945466" elementPath="/Root/PayableAmount/">
+         <dmlExpression><![CDATA[this\PayableAmount]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="533129348" elementPath="/Root/BillingItemCode/">
+         <dmlExpression><![CDATA[this\BillingItemCode]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="440807523" elementPath="/Root/">
+         <dmlExpression><![CDATA[%s_InvoiceData := "Start";
+for each in:\Details [ where  not (index( %s_InvoiceData , item\InvoiceNumber , 1 ) > 0) ]]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1586031226" elementPath="/Root/Quantity/">
+         <dmlExpression><![CDATA[this\Quantity]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1388860279" elementPath="/Root/TransactionDate/">
+         <dmlExpression><![CDATA[this\TransactionDate]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2085052315" elementPath="/Root/InvoiceDate/">
+         <dmlExpression><![CDATA[%s_InvoiceData := %s_InvoiceData + this\InvoiceDate;
+this\InvoiceDate]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

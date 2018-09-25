@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="73495bf2-8f71-4fa9-8459-87f234c7331b">
+   <signature appVersion="3.1.2" lastUpdatedOn="24/09/2018 15:28:18 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Trigger.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Claim.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="793854022" elementPath="/Root/Trigger/">
+         <dmlExpression><![CDATA[in:\ProviderCode\Code]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

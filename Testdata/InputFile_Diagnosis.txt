@@ -1,0 +1,17 @@
+Provider Code: 62158012
+Provider Name: COLUMBIA ASIA HOSPITAL PUCHONG
+Date Send: 03/08/2018
+Visit Type: OP
+
+Invoice Number|Invoice Date|Diagnosis Code|Diagnosis Description|Specialist Name 1|Specialist Name 2
+OPC-101872|29/01/2018|A021|Certain infectious and parasitic diseases|Dr ABC|Dr DEF
+OPC-101873|30/01/2018|M5116|Intervertebral disc disorders w radiculopathy, lumbar region|Dr ABC|
+OPC-101874|29/01/2018|M436|Diseases of the musculoskeletal system and connective tissue||
+OPC-101875|43102||Tinea cruris|Dr ABC|
+OPC-101876|30/01/2018|K830|Cholangitis|Dr ABC|
+OPC-101877|30/01/2018|N049|Nephrotic syndrome with unspecified morphologic changes|Dr ABC|Dr DEF
+OPC-101878|29/01/2018|J0180|Other acute sinusitis|Dr ABC|
+OPC-101879|29/01/2018|Q181|Preauricular sinus and cyst|Dr ABC|
+OPC-101880|43102|M86442|Chronic osteomyelitis with draining sinus, left hand|Dr ABC|
+
+No. of record: 9

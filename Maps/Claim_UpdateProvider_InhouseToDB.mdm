@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="76d911db-29d9-4808-ab70-608930ab00b3">
+   <signature appVersion="3.1.2" lastUpdatedOn="24/09/2018 21:06:02 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Claim_UpdateProvider_DB_UPDATE.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Claim.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1291657005" elementPath="/root/INVOICE_DATE/">
+         <dmlExpression><![CDATA[""]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="739848589" elementPath="/root/DATE_TIME_PROCESSED/">
+         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) ,"MM/DD/YYYY" ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="647277179" elementPath="/root/CLAIM_FILENAME/">
+         <dmlExpression><![CDATA[""]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-502794075" elementPath="/root/LOG_NUMBER/">
+         <dmlExpression><![CDATA[""]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-921177164" elementPath="/root/PAYABLE_AMOUNT/">
+         <dmlExpression><![CDATA[""]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-814543130" elementPath="/root/DETAILS_STATUS/">
+         <dmlExpression><![CDATA[if %flag = 0
+then
+"Failed: Mandatory field missing"
+else
+"Passed"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1374132062" elementPath="/root/PROVIDER_CODE/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderCode\Code, "Provider Code: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1323778913" elementPath="/root/INVOICE_NUMBER/">
+         <dmlExpression><![CDATA[""]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1771503276" elementPath="/root/OVERALL_STATUS/">
+         <dmlExpression><![CDATA["Failed"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1384758982" elementPath="/root/PROVIDER_NAME/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderName\Name, "Provider Name: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1947455153" elementPath="/root/">
+         <dmlExpression><![CDATA[1 times]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

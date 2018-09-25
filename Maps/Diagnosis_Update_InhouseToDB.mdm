@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="65c8ad98-a26a-41f0-bb32-82046d93f9f3">
+   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 14:45:14 +0530"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Diagnosis_Update_DB_UPDATE.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/Diagnosis.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="254381634" elementPath="/root/INVOICE_DATE/">
+         <dmlExpression><![CDATA[in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceDate]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1150087761" elementPath="/root/">
+         <dmlExpression><![CDATA[1 times]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1139162741" elementPath="/root/PROVIDER_NAME/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderName\Name,  "Provider Name: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-68210922" elementPath="/root/PROVIDER_CODE/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderCode\Code,  "Provider Code: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-525286656" elementPath="/root/DIAGNOSIS_STATUS/">
+         <dmlExpression><![CDATA[if %flag = 0
+then
+"Failed: Mandatory field missing"
+else
+"Passed"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1026135109" elementPath="/root/DATE_TIME_PROCESSED/">
+         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) , "MM/DD/YYYY" ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-916300169" elementPath="/root/INVOICE_NUMBER/">
+         <dmlExpression><![CDATA[in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1315010261" elementPath="/root/AIA_DIAGNOSIS_CODE/">
+         <dmlExpression><![CDATA[in:\Diagnosis[ %i_InvoiceCounter ]\DiagnosisCode]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="77786334" elementPath="/root/OVERALL_STATUS/">
+         <dmlExpression><![CDATA[%str_result := "Passed";
+
+%i_ImageCount := SelectImageStatus ( in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber ) ;
+%i_DetailsCount := SelectDetailsStatus ( in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber, "Failed: Mandatory field missing" ) ;
+
+if %i_ImageCount > 0 or %i_DetailsCount >0 or %flag = 0 then
+{
+	%str_result :="Failed"
+};
+if %str_InvoiceNumberPresent = "NO" then 
+{
+	%str_result:="Failed"
+};
+%str_result]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>
