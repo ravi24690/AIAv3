@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map xmlns="http://www.axway.com/mappingServices/map" id="d30e3a2a-b490-48e9-b67d-dbb46fb9e81e">
-   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 17:49:08 +0530"/>
+   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 21:24:34 +0530"/>
    <outputBusinessDocument businessDocument="~/Business Documents/Claim_Insert_DB_INSERT.bdoc" alias="out"/>
    <inputBusinessDocuments>
       <inputBusinessDocument businessDocument="~/Business Documents/Claim.bdoc" alias="in"/>
@@ -12,14 +12,14 @@
       <mapElement elementHash="2051712173" elementPath="/root/PAYABLE_AMOUNT/">
          <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\TotalPayableAmount]]></dmlExpression>
       </mapElement>
-      <mapElement elementHash="-1240373967" elementPath="/root/OVERALL_STATUS/">
-         <dmlExpression><![CDATA["Failed"]]></dmlExpression>
+      <mapElement elementHash="-1606940213" elementPath="/root/PROVIDER_NAME/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderName\Name, "Provider Name: " ) ]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="-1030478687" elementPath="/root/INVOICE_NUMBER/">
          <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter]\InvoiceNumber]]></dmlExpression>
       </mapElement>
-      <mapElement elementHash="-1606940213" elementPath="/root/PROVIDER_NAME/">
-         <dmlExpression><![CDATA[trimString ( in:\ProviderName\Name, "Provider Name: " ) ]]></dmlExpression>
+      <mapElement elementHash="-1240373967" elementPath="/root/OVERALL_STATUS/">
+         <dmlExpression><![CDATA["Failed"]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="-1361717521" elementPath="/root/CLAIM_STATUS/">
          <dmlExpression><![CDATA[%str_OverallStatus := "Passed";
@@ -27,7 +27,7 @@
 if %flag = 0 
 then 
 {
-	%str_OverallStatus:= "Failed/Missing mandatory field value" 
+	%str_OverallStatus:= "Failed: Mandatory field missing" 
 };
 
 if %i_Code = 0 
@@ -37,9 +37,6 @@ then
 } ;
 
 %str_OverallStatus]]></dmlExpression>
-      </mapElement>
-      <mapElement elementHash="-513093234" elementPath="/root/DATE_TIME_PROCESSED/">
-         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) ,"MM/DD/YYYY" ) ]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="548925569" elementPath="/root/INVOICE_DATE/">
          <dmlExpression><![CDATA[%s_validation :=  in:\Claim[ %i_InvoiceCounter ]\InvoiceDate;
@@ -52,6 +49,9 @@ if %Check=null then
 };
 
 %s_validation]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-513093234" elementPath="/root/DATE_TIME_PROCESSED/">
+         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) ,"MM/DD/YYYY" ) ]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="-1766982281" elementPath="/root/PROVIDER_CODE/">
          <dmlExpression><![CDATA[trimString ( in:\ProviderCode\Code, "Provider Code: " ) ]]></dmlExpression>

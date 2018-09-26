@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map xmlns="http://www.axway.com/mappingServices/map" id="50439675-82c9-47b8-8716-382e6f21f37d">
-   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 18:02:05 +0530"/>
+   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 21:24:48 +0530"/>
    <outputBusinessDocument businessDocument="~/Business Documents/Claim_Update_DB_UPDATE.bdoc" alias="out"/>
    <inputBusinessDocuments>
       <inputBusinessDocument businessDocument="~/Business Documents/Claim.bdoc" alias="in"/>
@@ -35,11 +35,11 @@ if %str_InvoiceNumberPresent = "NO" then
       <mapElement elementHash="-200248871" elementPath="/root/">
          <dmlExpression><![CDATA[1 times]]></dmlExpression>
       </mapElement>
-      <mapElement elementHash="-1792918228" elementPath="/root/LOG_NUMBER/">
-         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\LOGNumber]]></dmlExpression>
-      </mapElement>
       <mapElement elementHash="-1742025912" elementPath="/root/PROVIDER_NAME/">
          <dmlExpression><![CDATA[trimString ( in:\ProviderName\Name, "Provider Name: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1792918228" elementPath="/root/LOG_NUMBER/">
+         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\LOGNumber]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="2036251885" elementPath="/root/CLAIM_FILENAME/">
          <dmlExpression><![CDATA[%s_FileName:=getAttribute ( "B2BXGIReceiveInfo" );
@@ -47,16 +47,13 @@ if %str_InvoiceNumberPresent = "NO" then
 %end_pos:=index ( %s_FileName, "ConsumptionFileNameExtension" ) ;
 getSubString ( %s_FileName, %start_pos+22,%end_pos-5-%start_pos-29)]]></dmlExpression>
       </mapElement>
-      <mapElement elementHash="23312337" elementPath="/root/INVOICE_NUMBER/">
-         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\InvoiceNumber]]></dmlExpression>
-      </mapElement>
       <mapElement elementHash="-972716996" elementPath="/root/CLAIM_STATUS/">
          <dmlExpression><![CDATA[%str_OverallStatus := "Passed";
 
 if %flag = 0 
 then 
 {
-	%str_OverallStatus:= "Failed/Missing mandatory field value" 
+	%str_OverallStatus:= "Failed: Mandatory field missing" 
 };
 
 if %i_Code = 0 
@@ -66,6 +63,9 @@ then
 } ;
 
 %str_OverallStatus]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="23312337" elementPath="/root/INVOICE_NUMBER/">
+         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\InvoiceNumber]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="1183344591" elementPath="/root/INVOICE_DATE/">
          <dmlExpression><![CDATA[%s_validation :=  in:\Claim[ %i_InvoiceCounter ]\InvoiceDate;

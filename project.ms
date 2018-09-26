@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project xmlns="http://www.axway.com/mappingServices/project" createdBy="akesharwani" lastModifiedBy="akesharwani" checksumTest="true" creationDate="18/09/2018 19:52:17 +0530" engineType="DML" lastModifiedDate="25/09/2018 18:21:48 +0530" engineVersion="2.1">
+<project xmlns="http://www.axway.com/mappingServices/project" createdBy="akesharwani" lastModifiedBy="akesharwani" checksumTest="true" creationDate="18/09/2018 19:52:17 +0530" engineType="DML" lastModifiedDate="26/09/2018 19:35:02 +0530" engineVersion="2.1">
    <deploymentInformation>
       <deployment name="AIA_V2_InhouseToDBClaim" id="563a4a87-65af-4d78-8bc0-476b7be192a1" port="6080" date="19/09/2018 15:58:46 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="1" from="ITEM-S32255" host="10.151.14.55">
          <content>
@@ -519,6 +519,41 @@
       <deployment name="AIA_V3_ImageToDBImage" id="9e6f87f5-d873-4a54-8a2c-f711ac8e2324" port="6080" date="25/09/2018 18:21:48 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="14" from="ITEM-S32255" host="10.151.14.55">
          <content>
             <mapping>Mapping Flows/ImageToDBImage.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBClaim" id="9b223f8e-a5cc-494e-87d9-76cd6a86e1f3" port="6080" date="25/09/2018 21:25:20 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="21" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBClaim.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBClaim" id="6de65730-b85d-4c25-ab17-4af74d3adb53" port="6080" date="26/09/2018 14:21:48 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="22" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBClaim.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBClaim" id="a3dbd01a-822c-4502-a51b-d12562a94432" port="6080" date="26/09/2018 14:42:27 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="23" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBClaim.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBClaim" id="82a5e5c0-1297-48fc-ac31-22d97b47aeed" port="6080" date="26/09/2018 15:28:39 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="24" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBClaim.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBClaim" id="df22b855-8603-48fb-b58d-b8f004ace18f" port="6080" date="26/09/2018 17:48:11 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="25" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBClaim.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBClaim" id="d9421e6f-0855-49ee-bd2f-d70bb6499779" port="6080" date="26/09/2018 18:19:45 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="26" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBClaim.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBClaim" id="364f96bb-4cb0-40e0-98e6-95a3ce4349ce" port="6080" date="26/09/2018 19:35:02 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="27" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBClaim.dmlflw</mapping>
          </content>
       </deployment>
    </deploymentInformation>
