@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map xmlns="http://www.axway.com/mappingServices/map" id="a2ecb763-10f5-4cbc-a23d-b305ebe231f2">
-   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 18:19:18 +0530"/>
+   <signature appVersion="3.1.2" lastUpdatedOn="27/09/2018 21:06:54 +0530"/>
    <outputBusinessDocument businessDocument="~/Business Documents/Details_Update_DB_UPDATE.bdoc" alias="out"/>
    <inputBusinessDocuments>
       <inputBusinessDocument businessDocument="~/Business Documents/DetailsMerge.bdoc" alias="in"/>
@@ -40,6 +40,9 @@ if %Check=null then
 };
 
 %s_validation]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="601460901" elementPath="/root/DATE_TIME_PROCESSED/">
+         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) ,"MM/DD/YYYY hh:mm:ss" )]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="-1269245506" elementPath="/root/">
          <dmlExpression><![CDATA[1 times]]></dmlExpression>

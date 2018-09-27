@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map xmlns="http://www.axway.com/mappingServices/map" id="65c8ad98-a26a-41f0-bb32-82046d93f9f3">
-   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 18:19:52 +0530"/>
+   <signature appVersion="3.1.2" lastUpdatedOn="27/09/2018 21:07:44 +0530"/>
    <outputBusinessDocument businessDocument="~/Business Documents/Diagnosis_Update_DB_UPDATE.bdoc" alias="out"/>
    <inputBusinessDocuments>
       <inputBusinessDocument businessDocument="~/Business Documents/Diagnosis.bdoc" alias="in"/>
    </inputBusinessDocuments>
    <mapElements>
-      <mapElement elementHash="254381634" elementPath="/root/INVOICE_DATE/">
-         <dmlExpression><![CDATA[%s_validation :=  in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceDate;
-%Check:=	convertToD (%s_validation ,"DD/MM/YYYY");
-%i_Code := 1;
-if %Check=null then
-{
-	%s_validation:="Invalid Date";
-	%i_Code := 0
-};
-
-%s_validation]]></dmlExpression>
+      <mapElement elementHash="-1026135109" elementPath="/root/DATE_TIME_PROCESSED/">
+         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) ,"MM/DD/YYYY hh:mm:ss" )]]></dmlExpression>
       </mapElement>
-      <mapElement elementHash="1150087761" elementPath="/root/">
-         <dmlExpression><![CDATA[1 times]]></dmlExpression>
-      </mapElement>
-      <mapElement elementHash="-1139162741" elementPath="/root/PROVIDER_NAME/">
-         <dmlExpression><![CDATA[trimString ( in:\ProviderName\Name,  "Provider Name: " ) ]]></dmlExpression>
-      </mapElement>
-      <mapElement elementHash="-68210922" elementPath="/root/PROVIDER_CODE/">
-         <dmlExpression><![CDATA[trimString ( in:\ProviderCode\Code,  "Provider Code: " ) ]]></dmlExpression>
+      <mapElement elementHash="-916300169" elementPath="/root/INVOICE_NUMBER/">
+         <dmlExpression><![CDATA[in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="-525286656" elementPath="/root/DIAGNOSIS_STATUS/">
          <dmlExpression><![CDATA[if %flag = 0
@@ -34,8 +19,14 @@ then
 else
 "Passed"]]></dmlExpression>
       </mapElement>
-      <mapElement elementHash="-1026135109" elementPath="/root/DATE_TIME_PROCESSED/">
-         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) , "MM/DD/YYYY" ) ]]></dmlExpression>
+      <mapElement elementHash="-1139162741" elementPath="/root/PROVIDER_NAME/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderName\Name,  "Provider Name: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-68210922" elementPath="/root/PROVIDER_CODE/">
+         <dmlExpression><![CDATA[trimString ( in:\ProviderCode\Code,  "Provider Code: " ) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1150087761" elementPath="/root/">
+         <dmlExpression><![CDATA[1 times]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="1315010261" elementPath="/root/AIA_DIAGNOSIS_CODE/">
          <dmlExpression><![CDATA[%str_DiagnosisCode := "";
@@ -49,8 +40,17 @@ then
 };
 %str_DiagnosisCode]]></dmlExpression>
       </mapElement>
-      <mapElement elementHash="-916300169" elementPath="/root/INVOICE_NUMBER/">
-         <dmlExpression><![CDATA[in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceNumber]]></dmlExpression>
+      <mapElement elementHash="254381634" elementPath="/root/INVOICE_DATE/">
+         <dmlExpression><![CDATA[%s_validation :=  in:\Diagnosis[ %i_InvoiceCounter ]\InvoiceDate;
+%Check:=	convertToD (%s_validation ,"DD/MM/YYYY");
+%i_Code := 1;
+if %Check=null then
+{
+	%s_validation:="Invalid Date";
+	%i_Code := 0
+};
+
+%s_validation]]></dmlExpression>
       </mapElement>
    </mapElements>
 </map>

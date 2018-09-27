@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project xmlns="http://www.axway.com/mappingServices/project" createdBy="akesharwani" lastModifiedBy="akesharwani" checksumTest="true" creationDate="18/09/2018 19:52:17 +0530" engineType="DML" lastModifiedDate="26/09/2018 19:35:02 +0530" engineVersion="2.1">
+<project xmlns="http://www.axway.com/mappingServices/project" createdBy="akesharwani" lastModifiedBy="akesharwani" checksumTest="true" creationDate="18/09/2018 19:52:17 +0530" engineType="DML" lastModifiedDate="27/09/2018 21:08:42 +0530" engineVersion="2.1">
    <deploymentInformation>
       <deployment name="AIA_V2_InhouseToDBClaim" id="563a4a87-65af-4d78-8bc0-476b7be192a1" port="6080" date="19/09/2018 15:58:46 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="1" from="ITEM-S32255" host="10.151.14.55">
          <content>
@@ -554,6 +554,26 @@
       <deployment name="AIA_V3_InhouseToDBClaim" id="364f96bb-4cb0-40e0-98e6-95a3ce4349ce" port="6080" date="26/09/2018 19:35:02 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="27" from="ITEM-S32255" host="10.151.14.55">
          <content>
             <mapping>Mapping Flows/InhouseToDBClaim.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBClaim" id="0a14ac24-d92b-4511-b96e-2ee51ee6306c" port="6080" date="27/09/2018 21:05:45 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="28" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBClaim.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBDiagnosis" id="4b56fb49-e3ae-43f2-8182-eedc40a1595b" port="6080" date="27/09/2018 21:08:07 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="16" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBDiagnosis.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_InhouseToDBDetails" id="f4d020cb-ba72-4aac-8d78-d55232e8f27a" port="6080" date="27/09/2018 21:08:19 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="22" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/InhouseToDBDetails.dmlflw</mapping>
+         </content>
+      </deployment>
+      <deployment name="AIA_V3_ImageToDBImage" id="b856d837-60e1-45f0-b57a-9f7e8761cace" port="6080" date="27/09/2018 21:08:42 +0530" user="akesharwani (admin)" projectType="DML-2.1" version="15" from="ITEM-S32255" host="10.151.14.55">
+         <content>
+            <mapping>Mapping Flows/ImageToDBImage.dmlflw</mapping>
          </content>
       </deployment>
    </deploymentInformation>

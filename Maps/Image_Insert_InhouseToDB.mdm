@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map xmlns="http://www.axway.com/mappingServices/map" id="89af20fd-c3f8-4309-ba6a-85fec5329a57">
-   <signature appVersion="3.1.2" lastUpdatedOn="25/09/2018 18:15:19 +0530"/>
+   <signature appVersion="3.1.2" lastUpdatedOn="27/09/2018 21:07:12 +0530"/>
    <outputBusinessDocument businessDocument="~/Business Documents/Image_Insert_DB_INSERT.bdoc" alias="out"/>
    <inputBusinessDocuments>
       <inputBusinessDocument businessDocument="~/Business Documents/ReadImage.bdoc" alias="in"/>
@@ -11,6 +11,9 @@
       </mapElement>
       <mapElement elementHash="1490699421" elementPath="/root/IMAGE_STATUS/">
          <dmlExpression><![CDATA["Found"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-446542305" elementPath="/root/DATE_TIME_PROCESSED/">
+         <dmlExpression><![CDATA[formatString ( getDateAndTime (  ) ,"MM/DD/YYYY hh:mm:ss" )]]></dmlExpression>
       </mapElement>
       <mapElement elementHash="121387792" elementPath="/root/INVOICE_NUMBER/">
          <dmlExpression><![CDATA[in:\Root\FileName]]></dmlExpression>

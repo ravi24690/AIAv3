@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="75e2de09-cab1-4ed2-8ff1-8b977888a71b" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
-   <signature appVersion="3.1.2" lastUpdatedOn="18/09/2018 22:10:18 +0530"/>
+   <signature appVersion="3.1.2" lastUpdatedOn="27/09/2018 18:37:24 +0530"/>
    <childElements>
       <childElement factoryType="FlatFileParent" order="1" name="ProviderCode" parentDelimiterElement="3" hash="-99427256">
          <cardinality minimum="1" maximum="1"/>
@@ -135,7 +135,7 @@
       <childElement factoryType="FlatFileParent" order="39" name="NoOfRecords" parentDelimiterElement="3" hash="1099423052">
          <cardinality minimum="1" maximum="1"/>
          <childElements>
-            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0D 0x0A" paddingCharElement=" " name="NoOfRecords" leafDelimiterElement="2" paddingPosElement="1" order="40" keepDecimalSeparator="true" encodingElement="iso8859" hash="252738064" allowDistortion="true">
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="!EOF!" paddingCharElement=" " name="NoOfRecords" leafDelimiterElement="2" paddingPosElement="1" order="40" keepDecimalSeparator="true" encodingElement="iso8859" hash="252738064" allowDistortion="true">
                <cardinality minimum="1" maximum="1"/>
             </childElement>
          </childElements>
