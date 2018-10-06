@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <map xmlns="http://www.axway.com/mappingServices/map" id="50439675-82c9-47b8-8716-382e6f21f37d">
-   <signature appVersion="3.1.2" lastUpdatedOn="27/09/2018 21:02:03 +0530"/>
+   <signature appVersion="3.1.2" lastUpdatedOn="05/10/2018 12:01:41 +0530"/>
    <outputBusinessDocument businessDocument="~/Business Documents/Claim_Update_DB_UPDATE.bdoc" alias="out"/>
    <inputBusinessDocuments>
       <inputBusinessDocument businessDocument="~/Business Documents/Claim.bdoc" alias="in"/>
@@ -47,6 +47,9 @@ if %str_InvoiceNumberPresent = "NO" then
 %end_pos:=index ( %s_FileName, "ConsumptionFileNameExtension" ) ;
 getSubString ( %s_FileName, %start_pos+22,%end_pos-5-%start_pos-29)]]></dmlExpression>
       </mapElement>
+      <mapElement elementHash="1943959295" elementPath="/root/GL_NO/">
+         <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\LOGNumber]]></dmlExpression>
+      </mapElement>
       <mapElement elementHash="23312337" elementPath="/root/INVOICE_NUMBER/">
          <dmlExpression><![CDATA[in:\Claim[ %i_InvoiceCounter ]\InvoiceNumber]]></dmlExpression>
       </mapElement>
@@ -56,13 +59,13 @@ getSubString ( %s_FileName, %start_pos+22,%end_pos-5-%start_pos-29)]]></dmlExpre
 if %flag = 0 
 then 
 {
-	%str_OverallStatus:= "Failed: Mandatory field missing" 
+	%str_OverallStatus:= %s_MissingValue
 };
 
 if %i_Code = 0 
 then 
 {
-	%str_OverallStatus:="Invalid Date"
+	%str_OverallStatus:="Invalid Date" + "|" + %s_MissingValue
 } ;
 
 %str_OverallStatus]]></dmlExpression>
